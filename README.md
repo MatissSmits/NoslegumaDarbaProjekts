@@ -1,2 +1,2 @@
 # NoslegumaDarbaProjekts
-Website spele kkas lidziga agario un slizherio, bet bus savasīpašības un funkcijas.
+Website spele lidziga agario, bet ir savas īpašības un funkcijas.
