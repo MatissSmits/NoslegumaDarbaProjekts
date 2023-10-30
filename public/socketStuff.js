@@ -6,12 +6,12 @@ function init() {
   draw();
 
   // call the `init event` when the user is ready for the data
-  socket.emit("init", {
+  ("init", {
     playerName: player.name,
   });
 }
 
-socket.on("initReturn", (data) => {
+("initReturn", (data) => {
   orbs = data.orbs;
 
   setInterval(() => {
@@ -22,21 +22,21 @@ socket.on("initReturn", (data) => {
   }, Math.ceil(1000 / fps));
 });
 
-socket.on("tock", (data) => {
+("tock", (data) => {
   players = data.players;
 });
 
-socket.on("tickTock", (data) => {
+("tickTock", (data) => {
   player.locX = data.playerX;
   player.locY = data.playerY;
   document.querySelector(".player-score").innerHTML = data.playerScore;
 });
 
-socket.on("orbSwitch", (data) => {
+("orbSwitch", (data) => {
   orbs.splice(data.orbIndex, 1, data.newOrb);
 });
 
-socket.on("updateLeaderBoard", (topPlayers) => {
+("updateLeaderBoard", (topPlayers) => {
   // Clear the leader board
   document.querySelector(".leader-board").innerHTML = "";
 
@@ -48,7 +48,7 @@ socket.on("updateLeaderBoard", (topPlayers) => {
   });
 });
 
-socket.on("playerDeath", (data) => {
+("playerDeath", (data) => {
   const killed = data.died.name;
   const killer = data.killedBy.name;
   const message = `${killed} absorbed by ${killer}`;

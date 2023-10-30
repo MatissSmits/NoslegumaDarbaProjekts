@@ -1,9 +1,9 @@
-const socketio = require("../setup/socket.io");
+const socketio = require("./socket.js");
 const Orb = require("../classes/Orb");
 const Player = require("../classes/Player");
 const PlayerConfig = require("../classes/PlayerConfig");
 const PlayerData = require("../classes/PlayerData");
-const collisions = require("../setup/collisions");
+const collisions = require("./collisions");
 const settings = require("../public/settings");
 
 let orbs = [];
