@@ -1,6 +1,6 @@
-const PlayerConfig = require("../clsses/PlayerConfig");
-const PlayerData = require("../classes/PlayerData");
-const settings = require("../settings");
+const PlayerConfig = require("../clsses/PlayerConfig.js");
+const PlayerData = require("../classes/PlayerData.js");
+const settings = require("../public/settings.js");
 
 // this is where ALL the data is stored about a given PLAYER
 class Player {

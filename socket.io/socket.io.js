@@ -342,7 +342,7 @@
       });
     }
   
-    // imported from https://github.com/socketio/base64-arraybuffer
+    // imported
     var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
     // Use a lookup table to find the index.
     var lookup$1 = typeof Uint8Array === 'undefined' ? [] : new Uint8Array(256);

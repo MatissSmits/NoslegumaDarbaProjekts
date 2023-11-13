@@ -1,4 +1,4 @@
-const Orb = require("../classes/Orb");
+const Orb = require("../classes/Orb.js");
 
 function checkForOrbCollisions(pData, pConfig, orbs, settings) {
   return new Promise((resolve, reject) => {
