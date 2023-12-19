@@ -1,21 +1,3 @@
-
-
-
-
-// this is where ALL the data is stored about a given PLAYER
-class Player {
-  constructor(
-    socketId,
-    playerConfig = new PlayerConfig(settings),
-    playerData = new PlayerData("Player", settings)
-  ) {
-    this.socketId = socketId;
-    this.config = playerConfig;
-    this.data = playerData;
-  }
-}
-
-exports = Player;
 function Organ(xpos, ypos, size, xSpd, ySpd, maxSpd) {
 	this.lock = false;		// lock organ position relative to the CM, so any velocity dragging it away from CM will be neglected
 	this.x = xpos;
@@ -294,15 +276,15 @@ Organ.prototype.draw = function (context, name, isServer) {
 
 /**********************************************************************************/
 
-
-	
+function Player(player_id) {
+	this.pid = player_id;
 	this.organs = [];
 	this.cmx;		// center of mass (CM), the point equidistant from all organs
 	this.cmy;
 	this.directX = 0;	// direction in which CM is headed
 	this.directY = 0;
 
-
+}
 
 Player.prototype.constrain = function(){	// constrain organs movements
 	// after the organs are packed, they can't keep going in their direction, they have to start going in the CM direction
